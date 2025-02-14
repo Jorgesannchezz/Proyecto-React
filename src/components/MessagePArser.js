@@ -1,4 +1,4 @@
-class MessageParser {
+export class MessageParser {
     constructor(actionProvider, state) {
       this.actionProvider = actionProvider;
       this.state = state;
@@ -10,4 +10,3 @@ class MessageParser {
     }
   }
   
-  export default MessageParser;
