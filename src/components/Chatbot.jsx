@@ -3,7 +3,7 @@ import Chatbot from 'react-chatbot-kit';
 import 'react-chatbot-kit/build/main.css';
 import config from './ChatbotConfig';
 import ActionProvider from './ActionProvider';
-import MessageParser from './MessageParser';
+import MessageParser from './MessageParser.js';
 
 const ChatbotComponent = () => {
   const [isChatbotVisible, setIsChatbotVisible] = useState(false);
