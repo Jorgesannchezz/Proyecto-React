@@ -1,0 +1,32 @@
+/* Fetch.module.css */
+.container {
+    text-align: center;
+  }
+  
+  .profileImage {
+    width: 200px;
+    height: 200px;
+    margin: 20px 0;
+  }
+  
+  .profileName {
+    font-size: 64px;
+    margin: 10px 0;
+  }
+  
+  .profileInfo {
+    font-size: 32px;
+    margin: 5px 0;
+  }
+  
+  .myButton {
+    background-color: aliceblue;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  

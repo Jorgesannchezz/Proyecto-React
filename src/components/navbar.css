@@ -1,0 +1,170 @@
+/* Estilos generales para la Navbar */
+.navbar {
+  background-color: #007bff;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-left h1 {
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .navbar-left h1:hover {
+  color: #d1d1d1;
+}
+
+/* Navbar colapsable */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+/* Lista de navegación centrada */
+.navbar-center ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  left: 80%;
+}
+
+.navbar-center a {
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-center a:hover {
+  color: #d1d1d1;
+}
+
+/* Iconos a la derecha */
+.navbar-right .mode-button, .navbar-right .logout-btn {
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+/* Modo claro */
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #121212;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .navbar {
+  background-color: #333;
+}
+
+body.dark-mode .navbar-center a {
+  color: white;
+}
+
+body.dark-mode .navbar-center a:hover {
+  color: #ddd;
+}
+/* Barra de búsqueda */
+.search-input {
+  padding: 8px;
+  margin: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+/* Pop-up de resultados */
+.search-popup {
+  position: absolute;
+  top: 75%; /* Aseguramos que el pop-up esté debajo de la barra de búsqueda */
+  left: 63%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Estilo de cada producto */
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product-item h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-item p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Opcional: Para cuando no hay resultados */
+.search-popup::after {
+  content: "No se encontraron resultados.";
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-center ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+  }
+
+  .navbar-right {
+      margin-top: 1rem;
+  }
+}

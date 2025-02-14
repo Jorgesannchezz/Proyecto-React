@@ -1,0 +1,113 @@
+/* General */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido esté debajo de la navbar */
+  min-height: 100vh; /* Asegura que el contenido ocupe todo el alto de la pantalla */
+}
+
+/* Estilos de la Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #007bff;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra para que se distinga */
+}
+
+/* Sección izquierda - Título */
+.navbar-left h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: white; /* Asegura que el título sea blanco */
+}
+
+/* Sección central - Enlaces */
+.navbar-center ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-center li {
+  font-size: 1rem;
+}
+
+.navbar-center a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-center a:hover {
+  color: #d1d1d1;
+}
+
+/* Sección derecha - Botones */
+.navbar-right button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-right button:hover {
+  color: #d1d1d1;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-center ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .navbar-center a {
+    font-size: 1.2rem;
+  }
+
+  .navbar-right {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Modo claro */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}

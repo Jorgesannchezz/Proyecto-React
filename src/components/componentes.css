@@ -1,0 +1,95 @@
+/* Estilos generales para la sección de componentes */
+.components-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 2rem; /* Espacio entre los elementos */
+    padding: 2rem;
+    align-items: start;
+}
+
+/* Contenedor para cada botón y su componente */
+.component-wrapper {
+    display: flex;
+    flex-direction: column; /* Botón encima del componente */
+    gap: 1rem; /* Espacio entre el botón y el componente */
+}
+
+/* Botones */
+.components-section button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.components-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para los componentes */
+.component-container {
+    background-color: #f0f0f0; /* Fondo para el componente en modo claro */
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo claro */
+body.light-mode .components-section button {
+    background-color: #007bff;
+    color: white;
+}
+
+body.light-mode .components-section button:hover {
+    background-color: #0056b3;
+}
+
+body.light-mode .component-container {
+    background-color: #f0f0f0; /* Fondo claro */
+    color: #121212; /* Texto oscuro */
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .components-section {
+    background-color: #121212; /* Fondo oscuro */
+}
+
+body.dark-mode .components-section button {
+    background-color: #333; /* Botones oscuros */
+    color: white;
+}
+
+body.dark-mode .components-section button:hover {
+    background-color: #555; /* Hover más claro */
+}
+
+body.dark-mode .component-container {
+    background-color: #333; /* Fondo oscuro para el componente */
+    color: white; /* Texto claro */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Sombra sutil */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .components-section {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 1rem;
+    }
+
+    .component-wrapper {
+        flex-direction: column; /* Botón y componente en vertical */
+    }
+}
