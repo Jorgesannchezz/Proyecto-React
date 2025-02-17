@@ -12,7 +12,7 @@ import Informes from './components/Informe';
 import { Fetch } from "./components/componentes/Fetch";
 import { AuthProvider } from './context/AuthContext'; // Contexto de autenticación
 import { ThemeProvider } from './context/ThemeContext'; // Contexto de tema
-import ChatbotComponent from './components/Chatbot'; // Importa el componente del chatbot
+//import ChatbotComponent from './components/Chatbot'; // Importa el componente del chatbot
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
             <Route path="/informes" element={<Informes />} />
             <Route path="/" element={<ComponentsSection />} /> {/* Página de inicio */}
           </Routes>
-          <ChatbotComponent /> {/* Añade el componente del chatbot */}
+          {/*<ChatbotComponent />  Añade el componente del chatbot */}
         </ThemeProvider>
       </AuthProvider>
     </Router>
