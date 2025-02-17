@@ -34,7 +34,7 @@ const Informes = () => {
 
   // Leer el archivo CSV cuando el componente se monta
   useEffect(() => {
-    Papa.parse(`${process.env.PUBLIC_URL}/200125_LoL_champion_data.csv`, {
+    Papa.parse(`/200125_LoL_champion_data.csv`, {
       download: true,
       header: true,
       complete: (result) => {
