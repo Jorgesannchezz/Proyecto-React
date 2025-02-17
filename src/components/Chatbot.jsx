@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import Chatbot from 'react-chatbot-kit';
 import 'react-chatbot-kit/build/main.css';
 import config from './ChatbotConfig';
@@ -59,4 +59,4 @@ const chatbotStyle = {
   zIndex: 1000,
 };
 
-export default ChatbotComponent;
+export default ChatbotComponent;*/
